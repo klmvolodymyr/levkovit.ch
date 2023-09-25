@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f2953a1e-1eb6-4000-8c9a-5382a91a8c29" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/HttpFoundation/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/DependencyInjection/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Transliteration/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Render/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Annotation/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Graph/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Gettext/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Version/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Datetime/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Assertion/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/ClassFinder/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Uuid/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/PhpStorage/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Bridge/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/FileCache/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/ProxyBuilder/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/EventDispatcher/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Discovery/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Diff/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/modules/system/tests/fixtures/HtaccessTest/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Plugin/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Utility/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/FileSystem/composer.json" />
+      <option value="$PROJECT_DIR$/html/core/lib/Drupal/Component/Serialization/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/html/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2">
+    <include_path>
+      <path value="$PROJECT_DIR$/html/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/html/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/html/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony-cmf/routing" />
+      <path value="$PROJECT_DIR$/html/vendor/composer" />
+      <path value="$PROJECT_DIR$/html/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/html/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/html/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/html/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/html/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/html/vendor/stack/builder" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/html/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/html/vendor/typo3/phar-stream-wrapper" />
+      <path value="$PROJECT_DIR$/html/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/html/vendor/zendframework/zend-feed" />
+      <path value="$PROJECT_DIR$/html/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/html/vendor/pear/pear_exception" />
+      <path value="$PROJECT_DIR$/html/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/html/vendor/pear/pear-core-minimal" />
+      <path value="$PROJECT_DIR$/html/vendor/pear/archive_tar" />
+      <path value="$PROJECT_DIR$/html/vendor/pear/console_getopt" />
+      <path value="$PROJECT_DIR$/html/vendor/brumann/polyfill-unserialize" />
+      <path value="$PROJECT_DIR$/html/vendor/easyrdf/easyrdf" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/html/vendor/masterminds/html5" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/html/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/html/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/html/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/html/vendor/wikimedia/composer-merge-plugin" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2VlDPFfZGM5MXlydgE3JJQFq6kJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/vladimirklymniuk/Тестовые задания/in progress/levkovit.ch/drupal/nginx-conf",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2953a1e-1eb6-4000-8c9a-5382a91a8c29" name="Changes" comment="" />
+      <created>1695401746297</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695401746297</updated>
+      <workItem from="1695401748278" duration="2329000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

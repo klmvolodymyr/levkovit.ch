@@ -1,0 +1,131 @@
+2023-09-21 18:23:16,835:DEBUG:certbot._internal.main:certbot version: 2.6.0
+2023-09-21 18:23:16,836:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
+2023-09-21 18:23:16,836:DEBUG:certbot._internal.main:Arguments: ['--webroot', '--webroot-path=/var/www/html', '--email', 'sammy@your_domain', '--agree-tos', '--no-eff-email', '--force-renewal', '-d', 'your_domain', '-d', 'www.your_domain']
+2023-09-21 18:23:16,836:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2023-09-21 18:23:16,905:DEBUG:certbot._internal.log:Root logging level set at 30
+2023-09-21 18:23:16,906:DEBUG:certbot._internal.plugins.selection:Requested authenticator webroot and installer None
+2023-09-21 18:23:16,907:DEBUG:certbot._internal.plugins.selection:Single candidate plugin: * webroot
+Description: Saves the necessary validation files to a .well-known/acme-challenge/ directory within the nominated webroot path. A seperate HTTP server must be running and serving files from the webroot path. HTTP challenge only (wildcards not supported).
+Interfaces: Authenticator, Plugin
+Entry point: webroot = certbot._internal.plugins.webroot:Authenticator
+Initialized: <certbot._internal.plugins.webroot.Authenticator object at 0xffffb2b67820>
+Prep: True
+2023-09-21 18:23:16,907:DEBUG:certbot._internal.plugins.selection:Selected authenticator <certbot._internal.plugins.webroot.Authenticator object at 0xffffb2b67820> and installer None
+2023-09-21 18:23:16,907:INFO:certbot._internal.plugins.selection:Plugins selected: Authenticator webroot, Installer None
+2023-09-21 18:23:16,961:DEBUG:acme.client:Sending GET request to https://acme-v02.api.letsencrypt.org/directory.
+2023-09-21 18:23:16,962:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org:443
+2023-09-21 18:23:17,854:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "GET /directory HTTP/1.1" 200 752
+2023-09-21 18:23:17,854:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Date: Thu, 21 Sep 2023 18:23:17 GMT
+Content-Type: application/json
+Content-Length: 752
+Connection: keep-alive
+Cache-Control: public, max-age=0, no-cache
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+
+{
+  "keyChange": "https://acme-v02.api.letsencrypt.org/acme/key-change",
+  "meta": {
+    "caaIdentities": [
+      "letsencrypt.org"
+    ],
+    "termsOfService": "https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf",
+    "website": "https://letsencrypt.org"
+  },
+  "newAccount": "https://acme-v02.api.letsencrypt.org/acme/new-acct",
+  "newNonce": "https://acme-v02.api.letsencrypt.org/acme/new-nonce",
+  "newOrder": "https://acme-v02.api.letsencrypt.org/acme/new-order",
+  "qZor3jkvq6g": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417",
+  "renewalInfo": "https://acme-v02.api.letsencrypt.org/draft-ietf-acme-ari-01/renewalInfo/",
+  "revokeCert": "https://acme-v02.api.letsencrypt.org/acme/revoke-cert"
+}
+2023-09-21 18:23:17,854:DEBUG:acme.client:Requesting fresh nonce
+2023-09-21 18:23:17,855:DEBUG:acme.client:Sending HEAD request to https://acme-v02.api.letsencrypt.org/acme/new-nonce.
+2023-09-21 18:23:18,076:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "HEAD /acme/new-nonce HTTP/1.1" 200 0
+2023-09-21 18:23:18,083:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Date: Thu, 21 Sep 2023 18:23:18 GMT
+Connection: keep-alive
+Cache-Control: public, max-age=0, no-cache
+Link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+Replay-Nonce: a3DxhFlkwKAI5HKZeaTm0POOwT_PNl4dJDp5YMd_6tNOwSeeAoU
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+
+
+2023-09-21 18:23:18,084:DEBUG:acme.client:Storing nonce: a3DxhFlkwKAI5HKZeaTm0POOwT_PNl4dJDp5YMd_6tNOwSeeAoU
+2023-09-21 18:23:18,085:DEBUG:acme.client:JWS payload:
+b'{\n  "contact": [\n    "mailto:sammy@your_domain"\n  ],\n  "termsOfServiceAgreed": true\n}'
+2023-09-21 18:23:18,093:DEBUG:acme.client:Sending POST request to https://acme-v02.api.letsencrypt.org/acme/new-acct:
+{
+  "protected": "eyJhbGciOiAiUlMyNTYiLCAiandrIjogeyJuIjogIjBGTFU5ckFxSWVMM1loYW1qbldLTUhHamtlUm9tajhHZmlqSDk3eDJ0a1hPUDY4Nkl2eVpnMzNzWnZBVzhDLUlEYTR4cHpRSG5KVTVqZTFYWU0zZXBmbUdUY3QyNXpFYUE3UjBSVlpqMTRzd0kzY3JNQjgybV9kZncxM3B1dkkzdHRUNFpyNWdiVFpXb2VpNXlnOXYxbWR0RHF1cUZmRHhBYW5McWtzcUltUkFCNTNWYTh6WDVVdF85ZmF1NDRJU2FGd0NtZEVMT2w4NTc2M2R3c1ZtVUNzdU5OeXVqLVVwd01KZm5rUTZXQ1FKeFpRNVJrWXUwcHI1Wm9mTEdXT08yMWsyUWNjTGdjczdjSFFfcmx1MzhjNFhUS2JRQWRmS2pFdmczSS1OMWI4aE50Y3BaSnZGLTZVcWlzNmpCRldkdFJycHBXR042TXU1Vnh5LVBWZTJNUSIsICJlIjogIkFRQUIiLCAia3R5IjogIlJTQSJ9LCAibm9uY2UiOiAiYTNEeGhGbGt3S0FJNUhLWmVhVG0wUE9Pd1RfUE5sNGRKRHA1WU1kXzZ0Tk93U2VlQW9VIiwgInVybCI6ICJodHRwczovL2FjbWUtdjAyLmFwaS5sZXRzZW5jcnlwdC5vcmcvYWNtZS9uZXctYWNjdCJ9",
+  "signature": "LYPmCvd_lSTUI2BB0QfLTLGJ6xASiti2t3J35v6fqgSsokaAS83Cba3XQ8qSLGRnpKeKLyQSGUK4gCdu_R-chVaz5G0GWxHrXhQRKjd-StflOvDKbPQehV3LIcrhgVacoYvcAZrQQjqt5zrczaAqYddeVnBVP9V6OgNpF3iiQDGkktfN9MG8osm3PIvneaJDrdXjHu2zurIidH47wcXJl3pzXX9IjcYwuI6OmT-MiAiQySHcQulhlQI7B0vrwEv714wxxMQ4c02Vx6PBiviAu6CN-nDFlnqwPKV_fv5wQHtXx68lQM4vE4MM1gHRHul60TFu25jBDD271niYQwJ9qw",
+  "payload": "ewogICJjb250YWN0IjogWwogICAgIm1haWx0bzpzYW1teUB5b3VyX2RvbWFpbiIKICBdLAogICJ0ZXJtc09mU2VydmljZUFncmVlZCI6IHRydWUKfQ"
+}
+2023-09-21 18:23:18,375:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "POST /acme/new-acct HTTP/1.1" 400 218
+2023-09-21 18:23:18,379:DEBUG:acme.client:Received response:
+HTTP 400
+Server: nginx
+Date: Thu, 21 Sep 2023 18:23:18 GMT
+Content-Type: application/problem+json
+Content-Length: 218
+Connection: keep-alive
+Cache-Control: public, max-age=0, no-cache
+Link: <https://acme-v02.api.letsencrypt.org/directory>;rel="index"
+Replay-Nonce: OqS2LUF_VajU3dL19ySJNbDK0O5rfAPFcXU5BXclGAQQV2byVD4
+
+{
+  "type": "urn:ietf:params:acme:error:invalidContact",
+  "detail": "Error creating new account :: contact email \"sammy@your_domain\" has invalid domain : Domain name contains an invalid character",
+  "status": 400
+}
+2023-09-21 18:23:18,382:DEBUG:certbot._internal.log:Exiting abnormally:
+Traceback (most recent call last):
+  File "/opt/certbot/src/certbot/certbot/_internal/client.py", line 255, in perform_registration
+    return acme.new_account(messages.NewRegistration.from_data(
+  File "/opt/certbot/src/acme/acme/client.py", line 62, in new_account
+    response = self._post(self.directory['newAccount'], new_account)
+  File "/opt/certbot/src/acme/acme/client.py", line 366, in _post
+    return self.net.post(*args, **kwargs)
+  File "/opt/certbot/src/acme/acme/client.py", line 739, in post
+    return self._post_once(*args, **kwargs)
+  File "/opt/certbot/src/acme/acme/client.py", line 752, in _post_once
+    response = self._check_response(response, content_type=content_type)
+  File "/opt/certbot/src/acme/acme/client.py", line 603, in _check_response
+    raise messages.Error.from_json(jobj)
+acme.messages.Error: urn:ietf:params:acme:error:invalidContact :: The provided contact URI was invalid :: Error creating new account :: contact email "sammy@your_domain" has invalid domain : Domain name contains an invalid character
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/certbot", line 33, in <module>
+    sys.exit(load_entry_point('certbot', 'console_scripts', 'certbot')())
+  File "/opt/certbot/src/certbot/certbot/main.py", line 19, in main
+    return internal_main.main(cli_args)
+  File "/opt/certbot/src/certbot/certbot/_internal/main.py", line 1864, in main
+    return config.func(config, plugins)
+  File "/opt/certbot/src/certbot/certbot/_internal/main.py", line 1579, in certonly
+    le_client = _init_le_client(config, auth, installer)
+  File "/opt/certbot/src/certbot/certbot/_internal/main.py", line 830, in _init_le_client
+    acc, acme = _determine_account(config)
+  File "/opt/certbot/src/certbot/certbot/_internal/main.py", line 738, in _determine_account
+    acc, acme = client.register(
+  File "/opt/certbot/src/certbot/certbot/_internal/client.py", line 209, in register
+    regr = perform_registration(acme, config, tos_cb)
+  File "/opt/certbot/src/certbot/certbot/_internal/client.py", line 264, in perform_registration
+    config.email = display_ops.get_email(invalid=True)
+  File "/opt/certbot/src/certbot/certbot/display/ops.py", line 54, in get_email
+    code, email = display_util.input_text(invalid_prefix + msg if invalid else msg,
+  File "/opt/certbot/src/certbot/certbot/display/util.py", line 100, in input_text
+    return obj.get_display().input(message, default=default, cli_flag=cli_flag,
+  File "/opt/certbot/src/certbot/certbot/_internal/display/obj.py", line 152, in input
+    ans = util.input_with_timeout(message)
+  File "/opt/certbot/src/certbot/certbot/_internal/display/util.py", line 68, in input_with_timeout
+    raise EOFError
+EOFError
+2023-09-21 18:23:18,391:ERROR:certbot._internal.log:An unexpected error occurred:
+2023-09-21 18:23:18,393:ERROR:certbot._internal.log:EOFError
